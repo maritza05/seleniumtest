@@ -10,6 +10,7 @@ class TestCorreo(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.get('https://mail.live.com?mkt=us-us')
+        # self.driver.implicitly_wait(20)
 
     def test_prueba_titulo_de_outlook(self):
         self.assertEqual('Sign In', self.driver.title)
@@ -19,7 +20,7 @@ class TestCorreo(unittest.TestCase):
         username.send_keys('mariesparza426@outlook.com')
 
         passwd = self.driver.find_element_by_id('i0118')
-        passwd.send_keys('linux125')
+        passwd.send_keys('xxxx')
 
         btn_ok = self.driver.find_element_by_id('idSIButton9')
         btn_ok.click()
@@ -42,6 +43,7 @@ class TestCorreo(unittest.TestCase):
         options_from_email_exist = options_from_email is None
 
         self.assertEqual(options_from_email_exist, False)
+
 
 
 if __name__=='__main__':

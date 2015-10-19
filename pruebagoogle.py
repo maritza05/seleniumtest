@@ -7,7 +7,7 @@ class TestGooglePage(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.get('https://www.google.com.mx/')
-
+        
     def test_prueba_titulo_de_google(self):
         self.assertEqual('Google', self.driver.title)
 
